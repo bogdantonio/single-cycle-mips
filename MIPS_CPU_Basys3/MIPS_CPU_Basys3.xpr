@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c407ccc571f84e91bc41df75b50f4158"/>

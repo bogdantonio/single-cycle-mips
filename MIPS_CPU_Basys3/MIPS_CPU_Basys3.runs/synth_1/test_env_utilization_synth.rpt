@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Apr 28 09:11:29 2026
+| Date         : Wed May 20 21:04:25 2026
 | Host         : DESKTOP-K6LVBJO running 64-bit major release  (build 9200)
 | Command      : report_utilization -file test_env_utilization_synth.rpt -pb test_env_utilization_synth.pb
 | Design       : test_env
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 2693 |     0 |          0 |     20800 | 12.95 |
-|   LUT as Logic             |  621 |     0 |          0 |     20800 |  2.99 |
+| Slice LUTs*                | 2690 |     0 |          0 |     20800 | 12.93 |
+|   LUT as Logic             |  618 |     0 |          0 |     20800 |  2.97 |
 |   LUT as Memory            | 2072 |     0 |          0 |      9600 | 21.58 |
 |     LUT as Distributed RAM | 2072 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
@@ -157,21 +157,21 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | RAMS64E  | 2048 |  Distributed Memory |
 | MUXF7    | 1090 |               MuxFx |
 | MUXF8    |  512 |               MuxFx |
-| LUT6     |  452 |                 LUT |
+| LUT6     |  439 |                 LUT |
 | LDCE     |  144 |        Flop & Latch |
-| LUT5     |   78 |                 LUT |
-| LUT4     |   64 |                 LUT |
+| LUT5     |   65 |                 LUT |
+| LUT4     |   61 |                 LUT |
+| LUT2     |   53 |                 LUT |
 | FDRE     |   38 |        Flop & Latch |
-| LUT2     |   37 |                 LUT |
 | RAMD32   |   36 |  Distributed Memory |
+| LUT3     |   36 |                 LUT |
 | CARRY4   |   32 |          CarryLogic |
 | OBUF     |   24 |                  IO |
-| LUT3     |   20 |                 LUT |
 | FDCE     |   16 |        Flop & Latch |
 | RAMS32   |   12 |  Distributed Memory |
 | IBUF     |    7 |                  IO |
-| LUT1     |    3 |                 LUT |
 | BUFG     |    3 |               Clock |
+| LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 
 

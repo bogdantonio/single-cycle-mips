@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/synth_1/test_env.tcl"
+  variable script "D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/synth_1/test_env.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,33 +56,31 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/wt [current_project]
-set_property parent.project_path D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.xpr [current_project]
+set_property webtalk.parent_dir D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/wt [current_project]
+set_property parent.project_path D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo d:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/ip [current_project]
+set_property ip_output_repo d:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/ALU.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/MPG.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/RAM.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/ROM.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/SSD.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/instruction_decode.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/instruction_fetch.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/main_control.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/register_file.vhd
-  D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/test_env.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/ALU.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/MPG.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/RAM.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/ROM.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/SSD.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/instruction_decode.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/instruction_fetch.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/main_control.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/register_file.vhd
+  D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/sources_1/new/test_env.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -93,12 +91,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc
-set_property used_in_implementation false [get_files D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc]
+read_xdc D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc
+set_property used_in_implementation false [get_files D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/utils_1/imports/synth_1/test_env.dcp
+read_checkpoint -auto_incremental -incremental D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/utils_1/imports/synth_1/test_env.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

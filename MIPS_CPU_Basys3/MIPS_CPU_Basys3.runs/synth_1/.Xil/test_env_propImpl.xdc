@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc rfile:../../../MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc rfile:../../../MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports {CLK}]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

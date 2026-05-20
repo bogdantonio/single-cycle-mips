@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/synth_1'
+HD_PWD='D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

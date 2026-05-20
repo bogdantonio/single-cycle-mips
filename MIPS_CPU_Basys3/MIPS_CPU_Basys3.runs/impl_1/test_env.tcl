@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/impl_1/test_env.tcl"
+  variable script "D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/impl_1/test_env.tcl"
   variable category "vivado_impl"
 }
 
@@ -105,7 +105,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
-  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -113,15 +112,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/wt [current_project]
-  set_property parent.project_path D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.xpr [current_project]
-  set_property ip_output_repo D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/wt [current_project]
+  set_property parent.project_path D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.xpr [current_project]
+  set_property ip_output_repo D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/synth_1/test_env.dcp
+  add_files -quiet D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.runs/synth_1/test_env.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/4y3l/y2/s2/CA/ca-labs-2026-bogdantonio/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc
+  read_xdc D:/4y3l/y2/s2/CA/single-cycle-mips/MIPS_CPU_Basys3/MIPS_CPU_Basys3.srcs/constrs_1/new/Basys-3-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

@@ -55,20 +55,15 @@ signal operation: std_logic_vector(3 downto 0);
 signal op1: std_logic_vector(15 downto 0);
 signal op2: std_logic_vector(15 downto 0);
 
-signal set_w_reg: std_logic := '0';
-
 begin
 
 op1 <= RD1;
 op2 <= RD2 when ALUSrc = '0' else ExtImm;
 
-SetReg <= set_w_reg;
-
 ALU: process(operation)
 begin
     DEFAULT_OUTPUT:
     Set <= '0';
-    set_w_reg <= '0';
     branch_en <= '0';
     branch_address <= x"0000";
 
@@ -114,6 +109,8 @@ end process;
 
 ALU_CONTROL:process(ALUOp, func)
 begin
+    SetReg <= '0';
+
     case ALUOp is
         when "000" =>
             case func is
@@ -126,7 +123,7 @@ begin
                 when "110" => operation <= "0110"; -- xor
                 when "111" => -- slt
                     operation <= "0111"; 
-                    set_w_reg <= '1';
+                    SetReg <= '1';
             end case;    
         when "001" => operation <= "1000"; -- beq 
         when "010" => operation <= "1001"; -- ble 
